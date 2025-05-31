@@ -11,31 +11,6 @@
       background-color: #f9f9fb;
       color: #333;
     }
-    .hero-banner {
-      background-image: url('hero-banner.png');
-      background-color: #ccc; /* Fallback color if image doesn't load */
-      height: 80vh;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-text {
-      text-align: center;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px 40px;
-      border-radius: 10px;
-    }
-    .hero-text h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-    }
-    .hero-text p {
-      font-size: 1.3em;
-    }
     header {
       background-color: #3a86ff;
       color: white;
@@ -81,18 +56,62 @@
       padding: 20px;
       margin-top: 40px;
     }
+    .hero-banner {
+      background-image: url('hero-banner.png');
+      background-color: #ccc;
+      height: 80vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: zoomIn 3s ease-out forwards;
+    }
+    .hero-text {
+      text-align: center;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px 40px;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease-out 1s forwards;
+    }
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+    }
+    .hero-text p {
+      font-size: 1.3em;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes zoomIn {
+      from {
+        transform: scale(1.1);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hero Banner Start -->
   <div class="hero-banner">
     <div class="hero-text">
       <h1>Professional Cleaning Services</h1>
       <p>Reliable and thorough cleaning for your home</p>
     </div>
   </div>
-  <!-- Hero Banner End -->
 
   <header>
     <h1>Maid4U</h1>
@@ -126,16 +145,49 @@
     <section id="plans" class="plans">
       <h2>Service Plans</h2>
       <div class="card">
-        <h3>One-Time Service</h3>
-        <p>Book any service as needed. Credits will be earned based on service type.</p>
+        <h3>What's Included:</h3>
+        <p>✅ 3 cleaning sessions per month + free 1 laundry service</p>
+        <p><strong>Basic cleaning tasks:</strong></p>
+        <ul>
+          <li>Sweep & mop floors</li>
+          <li>Clean bathrooms (sink, toilet, mirror)</li>
+          <li>Wipe surfaces & dust</li>
+          <li>Clean kitchen counters</li>
+          <li>Empty trash</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Monthly Plan</h3>
-        <p>Ideal for regular cleaning needs. Includes scheduled visits every week.<br><strong>No credits provided under this plan.</strong></p>
+        <h3>Choose Your House Size & Plan</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+          <tr><th>House Size</th><th>No. of Maids</th><th>Duration per Visit</th><th>Monthly Price</th><th>Best For</th></tr>
+          <tr><td>Small (1–2 rooms)</td><td>1 maid</td><td>2 hours</td><td>RM235</td><td>Apartment / Condo</td></tr>
+          <tr><td>Medium (3–4 rooms)</td><td>2 maids</td><td>2 hours</td><td>RM470</td><td>Terrace / Medium home</td></tr>
+          <tr><td>Large (5+ rooms)</td><td>3 maids</td><td>3 hours</td><td>RM800</td><td>Semi-D / Bungalow</td></tr>
+        </table>
+        <p><em>✨ All prices are for 3 sessions/month</em></p>
       </div>
       <div class="card">
-        <h3>Annual Plan</h3>
-        <p>Get priority service and the best value over the year.<br><strong>No credits provided under this plan.</strong></p>
+        <h3>Scheduling Options</h3>
+        <ul>
+          <li><strong>Fixed:</strong> Choose 1 day & time weekly (e.g. every Friday 10am)</li>
+          <li><strong>Flexible:</strong> Book 3 sessions anytime within the month</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Optional Add-ons (per session)</h3>
+        <ul>
+          <li>Ironing service: +RM10</li>
+          <li>Bring own cleaning tools: +RM20</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Terms & Conditions</h3>
+        <ul>
+          <li>Must use all 3 sessions within 30 days</li>
+          <li>Unused sessions do not roll over (except 1-time exception)</li>
+          <li>24-hour notice required for rescheduling</li>
+          <li>Same maid available upon request, based on availability</li>
+        </ul>
       </div>
     </section>
 
