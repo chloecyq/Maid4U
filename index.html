@@ -79,13 +79,18 @@
       max-width: 600px;
       margin: 0 20px;
       box-sizing: border-box;
+      /* Removed <p> from here */
     }
-    .hero-text p {
-      font-size: 1.3em;
+    h2.reliable-text {
+      text-align: center;
+      color: #333;
+      margin-top: 40px;
+      font-weight: normal;
+      font-size: 1.6em;
     }
     .cta-button {
-      display: inline-block;
-      margin-top: 30px;
+      display: block;
+      margin: 20px auto 60px;
       padding: 15px 35px;
       font-size: 1.2em;
       color: white;
@@ -95,6 +100,8 @@
       font-weight: bold;
       box-shadow: 0 5px 15px rgba(255, 111, 97, 0.5);
       transition: background-color 0.3s ease, transform 0.3s ease;
+      max-width: 180px;
+      text-align: center;
       white-space: nowrap;
     }
     .cta-button:hover {
@@ -125,9 +132,13 @@
 
   <div class="hero-banner">
     <div class="hero-text">
-      <p>Reliable and thorough cleaning for your home</p>
-      <a href="#contact" class="cta-button">Book Now</a>
+      <!-- No text here now -->
     </div>
+  </div>
+
+  <div class="container">
+    <h2 class="reliable-text">Reliable and thorough cleaning for your home</h2>
+    <a href="#contact" class="cta-button">Book Now</a>
   </div>
 
   <header>
