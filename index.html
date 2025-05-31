@@ -84,6 +84,23 @@
     .hero-text p {
       font-size: 1.3em;
     }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 35px;
+      font-size: 1.2em;
+      color: white;
+      background-color: #ff6f61; /* Contrasting coral color */
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(255, 111, 97, 0.5);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #e55b4d;
+      transform: scale(1.05);
+    }
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -110,6 +127,7 @@
     <div class="hero-text">
       <h1>Professional Cleaning Services</h1>
       <p>Reliable and thorough cleaning for your home</p>
+      <a href="#contact" class="cta-button">Book Now</a>
     </div>
   </div>
 
